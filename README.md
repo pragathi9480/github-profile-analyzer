@@ -37,4 +37,4 @@ GitHub Portfolio Score along with strengths, red flags, and actionable recommend
 4. Click **Analyze Profile**
 
 ## Demo Video
-(Add your screen recording link here)
+https://drive.google.com/file/d/1p8-2SNcU9vKI75CpcWW7F4eOVjINS_lZ/view?usp=drive_link
