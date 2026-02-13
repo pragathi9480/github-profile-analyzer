@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Portfolio Analyzer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>GitHub Portfolio Analyzer & Enhancer</h1>
+    <p>Turn your GitHub profile into recruiter-ready proof</p>
+  </header>
+
+  <!-- INPUT SECTION -->
+  <section class="input-section">
+    <input 
+      type="text" 
+      id="githubUrl" 
+      placeholder="Enter GitHub Profile URL (e.g. https://github.com/username)" 
+    />
+    <button id="analyzeBtn">Analyze Profile</button>
+    <button id="clearBtn">Clear</button>
+
+  </section>
+  <section class="scoring-info">
+  <details>
+    <summary>How scoring works</summary>
+    <ul>
+      <li><strong>Repositories (10 pts):</strong> Having 5 or more public repositories</li>
+      <li><strong>Documentation (20 pts):</strong> Repositories with descriptions / README</li>
+      <li><strong>Recent Activity (20 pts):</strong> Updates in the last 90 days</li>
+      <li><strong>Language Diversity (15 pts):</strong> Using 3 or more programming languages</li>
+      <li><strong>Project Impact (15 pts):</strong> Stars or forks on repositories</li>
+      <li><strong>Consistency (20 pts):</strong> Steady project creation over time</li>
+    </ul>
+    <p class="note">⚠️ Private repositories are not included (GitHub API limitation).</p>
+  </details>
+</section>
+
+
+  <!-- LOADING -->
+  <section id="loading" class="hidden">
+    <p>Analyzing GitHub profile...</p>
+  </section>
+
+  <!-- RESULT SECTION -->
+  <section id="result" class="hidden">
+
+    <div class="score-box">
+      <h2>GitHub Portfolio Score</h2>
+      <p id="score">-- / 100</p>
+    </div>
+
+    <div class="result-grid">
+
+      <div class="card">
+        <h3>Strengths</h3>
+        <ul id="strengths"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Red Flags</h3>
+        <ul id="redFlags"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Recommendations</h3>
+        <ul id="recommendations"></ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>   
